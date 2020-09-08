@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">First Number</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput"
+                        placeholder="Enter the first number" name='a'>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Second Number</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Enter the second Number" name='b'>
+                </div>
+                <input type="submit" class="btn btn-primary" value="add" onclick="performAddition(a.value,b.value)">
+                <input type="submit" class="btn btn-primary" value="sub" onclick="performSubtraction(a.value,b.value)">
+                <input type="submit" class="btn btn-primary" value="mul"
+                    onclick="performMultiplication(a.value,b.value)">
+                <input type="submit" class="btn btn-primary" value="div" onclick="performDivision(a.value,b.value)">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function performAddition(a, b) {
+        var result = parseFloat(a) + parseFloat(b)
+        document.writeln('the added value is ' + result)
+    }
+    function performSubtraction(a, b) {
+        var result = parseFloat(a) - parseFloat(b)
+        document.writeln('the subtracted value is ' + result)
+    }
+    function performMultiplication(a, b) {
+        var result = parseFloat(a) * parseFloat(b)
+        document.writeln('the multiplied value is ' + result)
+    }
+    function performDivision(a, b) {
+        var result = parseFloat(a) / parseFloat(b)
+        document.writeln('the divided value is ' + result)
+    }
+</script>
+
+</html>
